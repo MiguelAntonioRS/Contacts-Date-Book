@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Contact Register</title>
@@ -7,22 +7,22 @@
 <body>
 
     <h3>Registro de Contactos</h3>
-    <form action="" method="post">
+    <form action="" method="post" th:object="contacts">
         <div>
             <label for='name'>Nombre : </label>
-            <input id="name" type="text" placeholder="Digite su nombre">
+            <input id="name" type="text" placeholder="Digite su nombre" th:field="*{name}">
         </div>
         <div>
             <label for="phone">Celular : </label>
-            <input id="phone" type="text" placeholder="Digite su celular">
+            <input id="phone" type="text" placeholder="Digite su celular" th:field="*{phone}">
         </div>
         <div>
             <label for="email">Email : </label>
-            <input id="email" type="email" placeholder="Digite su email">
+            <input id="email" type="email" placeholder="Digite su email" th:field="*{email}">
         </div>
         <div>
             <label for="bornDate">Fecha de Nacimiento : </label>
-            <input id="bornDate" type="date">
+            <input id="bornDate" type="date" th:field="*{bornDate}">
         </div>
 
         <button>Guardar</button>

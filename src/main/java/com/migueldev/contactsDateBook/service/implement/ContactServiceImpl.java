@@ -1,36 +1,37 @@
-package com.migueldev.contactsDateBook.persistence.implement;
+package com.migueldev.contactsDateBook.service.implement;
 
 import com.migueldev.contactsDateBook.entities.Contacts;
 import com.migueldev.contactsDateBook.persistence.IContactsDAO;
-import com.migueldev.contactsDateBook.repository.ContactsRepository;
+import com.migueldev.contactsDateBook.service.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Optional;
 
-@Component
-public class ContactsDAOImpl implements IContactsDAO {
+@Service
+public class ContactServiceImpl implements ContactService {
 
     @Autowired
-    private ContactsRepository contactsRepository;
+    private IContactsDAO iContactsDAO;
 
     @Override
     public List<Contacts> findAll() {
-        return contactsRepository.findAll();
+        return iContactsDAO.findAll();
     }
 
     @Override
     public Contacts save(Contacts contacts) {
-        return contactsRepository.save(contacts);
+        return iContactsDAO.save(contacts);
     }
 
     @Override
     public Optional<Contacts> findById(Integer id) {
-        return contactsRepository.findById(id);
+        return iContactsDAO.findById(id);
     }
 
     @Override
     public void delete(Integer id) {
-        contactsRepository.deleteById(id);
+        iContactsDAO.delete(id);
     }
 }

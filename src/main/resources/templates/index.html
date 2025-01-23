@@ -11,5 +11,28 @@
 
     <h1>Contacts List</h1>
     <a href="new">Add</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Born Date</th>
+                <th>Registry Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="contacts : ${contacts}">
+                <td th:text="${contacts.id}"></td>
+                <td th:text="${contacts.name}"></td>
+                <td th:text="${contacts.phone}"></td>
+                <td th:text="${contacts.email}"></td>
+                <td th:text="${contacts.bornDate}"></td>
+                <td th:text="${contacts.registryDate}"></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>

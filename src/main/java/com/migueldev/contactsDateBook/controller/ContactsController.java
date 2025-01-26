@@ -5,6 +5,8 @@ import com.migueldev.contactsDateBook.service.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -30,7 +32,11 @@ public class ContactsController {
     }
 
     @PostMapping("/new")
-    public String saveContact(Contacts contacts, RedirectAttributes redirect) {
+    public String saveContact(@Validated Contacts contacts,BindingResult bindingResult, RedirectAttributes redirect, Model model) {
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("contacts", contacts);
+        }
+
         contactService.save(contacts);
         redirect.addFlashAttribute("msgSucc", "El contacto se guardo satisfactoriamente");
         return "redirect:/";

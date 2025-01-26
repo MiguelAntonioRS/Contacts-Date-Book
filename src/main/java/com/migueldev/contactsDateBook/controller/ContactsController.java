@@ -35,6 +35,7 @@ public class ContactsController {
     public String saveContact(@Validated Contacts contacts,BindingResult bindingResult, RedirectAttributes redirect, Model model) {
         if (bindingResult.hasErrors()) {
             model.addAttribute("contacts", contacts);
+            return "new";
         }
 
         contactService.save(contacts);

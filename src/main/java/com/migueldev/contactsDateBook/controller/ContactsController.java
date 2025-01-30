@@ -45,14 +45,14 @@ public class ContactsController {
         return "redirect:/";
     }
 
-    @GetMapping("/edit/{id}/")
+    @GetMapping("/edit/{id}")
     public String editContact( @PathVariable Integer id, Model model) {
         Contacts contacts = contactService.getById(id);
         model.addAttribute("contacts", contacts);
         return "new";
     }
 
-    @PostMapping("/edit/{id}/")
+    @PostMapping("/edit/{id}")
     public String actualizeContact(@PathVariable Integer id, @Validated Contacts contacts, BindingResult bindingResult, RedirectAttributes redirect, Model model) {
         Contacts contactsDb = contactService.getById(id);
 

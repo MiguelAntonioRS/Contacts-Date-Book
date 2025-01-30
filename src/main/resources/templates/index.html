@@ -33,7 +33,7 @@
                 <td th:text="${#temporals.format(contacts.bornDate, 'dd/MM/YYYY')}"></td>
                 <td th:text="${#temporals.format(contacts.registryDate, 'dd/MM/YYYY hh:mm a')}"></td>
                 <td>
-                    <a th:href="@{/{id}/edit/(id=${contacts.id})}">Editar</a>
+                    <a th:href="@{/edit/{id} (id=${contacts.id})}">Editar</a>
                 </td>
             </tr>
         </tbody>

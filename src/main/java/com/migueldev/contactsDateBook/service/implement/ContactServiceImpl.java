@@ -26,8 +26,8 @@ public class ContactServiceImpl implements ContactService {
     }
 
     @Override
-    public Optional<Contacts> findById(Integer id) {
-        return iContactsDAO.findById(id);
+    public Contacts getById(Integer id) {
+        return iContactsDAO.getById(id);
     }
 
     @Override

@@ -13,7 +13,7 @@ public interface IContactsDAO {
 
     public Contacts save(Contacts contacts);
 
-    Optional<Contacts> findById(Integer id);
+    public Contacts getById(Integer id);
 
     public void delete(Integer id);
 }

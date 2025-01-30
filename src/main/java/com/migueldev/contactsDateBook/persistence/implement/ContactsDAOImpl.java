@@ -25,8 +25,8 @@ public class ContactsDAOImpl implements IContactsDAO {
     }
 
     @Override
-    public Optional<Contacts> findById(Integer id) {
-        return contactsRepository.findById(id);
+    public Contacts getById(Integer id) {
+        return contactsRepository.getById(id);
     }
 
     @Override

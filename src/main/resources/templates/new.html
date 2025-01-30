@@ -31,8 +31,10 @@
                     <div th:if="${#fields.hasErrors('bornDate')}" th:errors="*{bornDate}" class="invalid-feedback"></div>
                 </div>
 
-                <button>Guardar</button>
-                <a href="/">Cancelar</a>
+                <div class="text-end">
+                    <button class="btn btn-success mt-2">Guardar</button>
+                    <a href="/" class="btn btn-danger mt-2">Cancelar</a>
+                </div>
             </form>
         </div>
     </div>

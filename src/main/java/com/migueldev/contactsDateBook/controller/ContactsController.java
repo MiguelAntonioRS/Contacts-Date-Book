@@ -51,4 +51,23 @@ public class ContactsController {
         model.addAttribute("contacts", contacts);
         return "new";
     }
+
+    @PostMapping("/edit/{id}")
+    public String actualizeContact(@PathVariable Integer id, @Validated Contacts contacts, BindingResult bindingResult, RedirectAttributes redirect, Model model) {
+        Contacts contactsDb = contactService.findById(id).orElseThrow();
+
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("contacts", contacts);
+            return "new";
+        }
+
+        contactsDb.setName(contacts.getName());
+        contactsDb.setPhone(contacts.getPhone());
+        contactsDb.setEmail(contacts.getEmail());
+        contactsDb.setBornDate(contacts.getBornDate());
+
+        contactService.save(contactsDb);
+        redirect.addFlashAttribute("msgSucc", "El contacto se actualizo satisfactoriamente");
+        return "redirect:/";
+    }
 }

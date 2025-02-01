@@ -14,5 +14,5 @@ public interface ContactService {
 
     public Contacts getById(Integer id);
 
-    public void delete(Integer id);
+    public void delete(Contacts contacts);
 }

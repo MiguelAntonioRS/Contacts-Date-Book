@@ -31,7 +31,7 @@ public class ContactServiceImpl implements ContactService {
     }
 
     @Override
-    public void delete(Integer id) {
-        iContactsDAO.delete(id);
+    public void delete(Contacts contacts) {
+        iContactsDAO.delete(contacts);
     }
 }

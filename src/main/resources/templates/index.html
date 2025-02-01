@@ -38,9 +38,9 @@
                 <td th:text="${#temporals.format(contacts.bornDate, 'dd/MM/YYYY')}"></td>
                 <td th:text="${#temporals.format(contacts.registryDate, 'dd/MM/YYYY hh:mm a')}"></td>
                 <td>
-                    <a th:href="@{/edit/{id} (id=${contacts.id})}">Editar</a>
+                    <a th:href="@{/edit/{id} (id=${contacts.id})}" class="btn btn-warning">Editar</a>
 
-                    <a href="#" onclick="delete_contact(this)">Eliminar</a>
+                    <a href="#" onclick="delete_contact(this)" class="btn btn-danger">Eliminar</a>
 
                     <form th:action="@{/delete/{id} (id=${contacts.id})}" method="post">
 

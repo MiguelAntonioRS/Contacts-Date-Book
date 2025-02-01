@@ -70,4 +70,13 @@ public class ContactsController {
         redirect.addFlashAttribute("msgSucc", "El contacto se actualizo satisfactoriamente");
         return "redirect:/";
     }
+
+    @PostMapping("/delete/{id}")
+    public String deleteContact(@PathVariable Integer id, RedirectAttributes redirect) {
+        Contacts contacts = contactService.getById(id);
+        contactService.delete(contacts);
+
+        redirect.addFlashAttribute("msgSucc", "Contacto Eliminado");
+        return "new";
+    }
 }

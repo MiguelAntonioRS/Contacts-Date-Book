@@ -30,7 +30,7 @@ public class ContactsDAOImpl implements IContactsDAO {
     }
 
     @Override
-    public void delete(Integer id) {
-        contactsRepository.deleteById(id);
+    public void delete(Contacts contacts) {
+        contactsRepository.delete(contacts);
     }
 }

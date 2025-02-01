@@ -77,6 +77,6 @@ public class ContactsController {
         contactService.delete(contacts);
 
         redirect.addFlashAttribute("msgSucc", "Contacto Eliminado");
-        return "new";
+        return "redirect:/";
     }
 }

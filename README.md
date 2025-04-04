@@ -15,7 +15,7 @@ Contacts Date Book is a web application for managing contacts and important date
 
 ## Installation
 1. Clone the repository:
-   ```bash
+   ```bash 
    git clone https://github.com/MiguelAntonioRS/Contacts-Date-Book.git
 
 2. Navigate to the project directory:

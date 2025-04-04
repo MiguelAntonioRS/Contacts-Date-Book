@@ -10,8 +10,8 @@ Contacts Date Book is a web application for managing contacts and important date
 
 ## Technologies Used
 - **Backend:** Spring Boot
-- **Database:** (Specify your database, e.g., MySQL, PostgreSQL)
-- **Frontend:** (Specify your frontend technologies, e.g., Thymeleaf, React, Angular)
+- **Database:** Databases, e.g., MySQL, PostgreSQL
+- **Frontend:**  Thymeleaf
 
 ## Installation
 1. Clone the repository:

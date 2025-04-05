@@ -18,7 +18,7 @@ Contacts Date Book is a web application for managing contacts and important date
    ```bash 
    git clone https://github.com/MiguelAntonioRS/Contacts-Date-Book.git
 
-2. Navigate to the project directory:
+2. Navigate to the project directory: 
    cd Contacts-Date-Book
 
 3. Build and run the application:

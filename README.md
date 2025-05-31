@@ -7,7 +7,7 @@ Contacts Date Book is a web application for managing contacts and important date
 - Store important dates for each contact.
 - Search and filter contacts easily.
 - User-friendly interface.
-
+  
 ## Technologies Used
 - **Backend:** Spring Boot
 - **Database:** Databases, e.g., MySQL, PostgreSQL

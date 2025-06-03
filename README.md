@@ -5,7 +5,7 @@ Contacts Date Book is a web application for managing contacts and important date
 ## Features
 - Add, edit, and delete contacts.
 - Store important dates for each contact.
-- Search and filter contacts easily.
+- Search and filter contacts easily. 
 - User-friendly interface.
   
 ## Technologies Used
